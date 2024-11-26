@@ -1,0 +1,375 @@
+@font-face {
+    font-family: roboto_black;
+    src: url(roboto_black.ttf);
+  }
+@font-face {
+    font-family: roboto_bold;
+    src: url(roboto_bold.ttf);
+}
+:root {
+    /* COLORS */
+    --background-color: #f1f1f1;
+    --main-color: rgb(21, 21, 21);
+    --secondary-color: rgb(55, 55, 55);
+    --white: #fff;
+
+    /* FONTS */
+    --font-black: roboto_black;
+    --font-bold: roboto_bold;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    font-family: var(--font-black);
+    background-color: var(--background-color);
+}
+
+.c {
+    margin: 0 auto;
+    padding: 50px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    position: relative;
+}
+
+h1 {
+    color: var(--main-color);
+    font-size: 4em;
+}
+
+p {
+    color: var(--secondary-color);
+    font-size: 2em;
+}
+a{
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+.header-space{
+    margin: 0px 50px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.v-space{
+    margin: 50px 0px;
+}
+.v-space-small{
+    margin: 15px 0px;
+}
+.h-space{
+    margin: 0px 50px;
+}
+.h-space-big{
+    margin: 0px 200px;
+}
+.space60{
+    margin: 0px 10% 0px 10%;
+}
+.indent{
+    margin-left: 50px;
+}
+
+.footer{
+    font-size: 10px;
+}
+.width50{
+    width: 50%;
+}
+
+.headshot {
+    background: url(portrait.webp);
+    background-size: 115%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: animate_headshot 13s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+
+/*STRENGTHS*/
+.strength{
+    margin: 20px -50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    
+}
+.strength > p{
+    color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    margin: 100px 0px 100px 50px;
+}
+.strengths1{
+    background: url(camera_banner_c.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center right !important;
+}
+.strengths2{
+    background: url(web_banner_c.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center right !important;
+}
+.strengths3{
+    background: url(video_banner_c.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center right !important;
+}
+.strengths4{
+    background: url(media_banner_c.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center right !important;
+}
+
+
+
+/*
+    0%{
+        border-radius: top-left top-right bottom-right bottom-left/60% 30% 70% 40%;
+    }
+
+    @keyframes animate_headshot{
+    0%{
+        border-radius: 50% 60% 45% 70%/40% 45% 55% 60%;
+    }
+    33%{
+        border-radius: 55% 50% 50% 65%/45% 25% 60% 30%;
+    }
+    66%{
+        border-radius: 35% 65% 55% 80%/30% 50% 35% 65%;
+    }
+    100%{
+        border-radius: 50% 60% 45% 70%/40% 45% 55% 60%;
+    }
+}
+
+
+
+0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    25%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    50%{
+        border-radius: 45% 35% 35% 65%/65% 35% 45% 50%;
+    }
+    75%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+*/
+@keyframes animate_headshot{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+@media only screen and (min-width: 1730px){
+    strengths1, .strengths2, .strengths4{
+        background-position: top -3vw right !important;
+    }
+}
+@media only screen and (max-width: 1730px){
+    .strengths1, .strengths2, .strengths4{
+        background-size: 100%;
+    }
+    .strengths3{
+        background-size: 100%;
+    }
+}
+@media only screen and (max-width: 1610px){
+    .headshot{
+        background-size: 140%;
+    }
+}
+@media only screen and (max-width: 1415px){
+    .header .column{
+        max-width: 600px;
+    }
+    h1{
+        font-size: 3.5em;
+    }
+    p{
+        font-size: 1.8em;
+    }
+}
+@media only screen and (max-width: 1305px){
+    .headshot{
+        background-size: 165%;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .strengths1, .strengths2, .strengths4{
+        background-size: 130%;
+    }
+    .strengths3{
+        background-position: -270px -30px !important;
+        background-size: 130%;
+    }
+}
+@media only screen and (max-width: 1169px){
+    .headshot{
+        background-size: 200%;
+    }
+    .footer .row{
+        margin: 0px 50px;
+    }
+    h1{
+        font-size: 3em;
+    }
+    p{
+        font-size: 1.5em;
+    }
+}
+@media only screen and (max-width: 1020px){
+    .strengths1, .strengths2, .strengths4{        
+        background-position: -450px -30px;
+        background-size: 150%;
+    }
+    .strengths3{
+        background-position: -550px -65px !important;
+        background-size: 170%;
+    }
+}
+@media only screen and (max-width: 940px){ 
+    .headshot{
+        background-size: 210%;
+    }
+}
+@media only screen and (max-width: 900px){
+    .strengths1, .strengths2, .strengths4{        
+        background-size: 170%;
+    }
+    .strengths3{
+        background-position: right -120px center !important;
+        background-size: 170%;
+    }
+    .header{
+        height: 700px;
+    }
+    .header .column{
+        margin: 0px;
+        max-width: 100%;
+    }
+    .h-text{
+        position: absolute;
+        bottom: 50px;
+        z-index: 1;
+    }
+    .headshot{
+        position: absolute;
+        width: 80vw;
+        background-size: 100%;
+        background-position: 0px -120px;
+    }
+    .footer > div{
+        flex-direction: column;
+    }
+    .footer .column{
+        width: 100%;
+    }
+    .h-text{
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    h1{
+        font-size: 2.8em;
+    }
+    p{
+        font-size: 1.3em;
+    }
+    .header .column{
+        margin: 0px 50px;
+    }
+    .footer{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 671px){
+    .headshot{
+        height: 80vw;
+        background-position: 0px -70px;
+    }
+    .header{
+        height: 680px;
+    }
+    
+    .c{
+        padding: 50px 0px;
+    }
+    .strength{
+        margin: 10px 0px;
+    }
+}
+@media only screen and (max-width: 680px){
+    .strengths1, .strengths2, .strengths4{        
+        background-size: 230%;
+    }
+    .strengths3{
+        background-position: right -150px center !important;
+        background-size: 240%;
+    }
+}
+@media only screen and (max-width: 550px){
+    .header{
+        height: 600px;
+    }
+}
+@media only screen and (max-width: 510px){
+    .strengths1, .strengths2, .strengths4{
+        background-position: right -60px center !important;
+        background-size: 310%;
+    }
+    .strengths3{
+        background-position: right -200px center !important;
+        background-size: 330%;
+    }
+}
+@media only screen and (max-width: 415px){
+    .strengths1, .strengths2, .strengths4{
+        background-position: right -20px center !important;
+        background-size: 210%;
+    }
+    .strengths3{
+        background-position: right -100px center !important;
+        background-size: 250%;
+    }
+    .strength > p{
+        margin: 50px 0px 50px 50px;
+    }
+}
+@media only screen and (max-width: 380px){
+    .h-text{
+        bottom: 80px;
+    }
+    .header{
+        height: 570px;
+    }
+}
