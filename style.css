@@ -26,6 +26,29 @@ body {
     font-family: var(--font-black);
     background-color: var(--background-color);
 }
+.myheader{
+    display: flex;
+    position: relative;
+    background-color: red;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.portrait{
+    align-items: end;
+    width: 600px;
+}
+.portrait_container{
+    display: flex;
+    justify-content: end;
+}
+.h-text{
+    width: 40%;
+}
+
 
 .c {
     margin: 0 auto;
@@ -112,17 +135,7 @@ a{
 
 
 
-.headshot {
-    background: url(portrait.webp);
-    background-size: 115%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 400px;
-    height: 600px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: animate_headshot 13s ease-in-out infinite;
-    transition: all 1s ease-in-out;
-}
+
 
 
 /*STRENGTHS*/
@@ -168,55 +181,7 @@ a{
 
 
 
-/*
-    0%{
-        border-radius: top-left top-right bottom-right bottom-left/60% 30% 70% 40%;
-    }
 
-    @keyframes animate_headshot{
-    0%{
-        border-radius: 50% 60% 45% 70%/40% 45% 55% 60%;
-    }
-    33%{
-        border-radius: 55% 50% 50% 65%/45% 25% 60% 30%;
-    }
-    66%{
-        border-radius: 35% 65% 55% 80%/30% 50% 35% 65%;
-    }
-    100%{
-        border-radius: 50% 60% 45% 70%/40% 45% 55% 60%;
-    }
-}
-
-
-
-0%{
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
-    25%{
-        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    }
-    50%{
-        border-radius: 45% 35% 35% 65%/65% 35% 45% 50%;
-    }
-    75%{
-        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    }
-    100%{
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
-*/
-@keyframes animate_headshot{
-    0%{
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
-    50%{
-        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    }
-    100%{
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
-}
 @media only screen and (min-width: 1730px){
     strengths1, .strengths2, .strengths4{
         background-position: top -3vw right !important;
@@ -226,10 +191,8 @@ a{
     .strengths1, .strengths2, .strengths3, .strengths4, .strengths5{
         background-size: 100%;
     }
-}
-@media only screen and (max-width: 1610px){
-    .headshot{
-        background-size: 140%;
+    .portrait{
+        width: 500px;
     }
 }
 @media only screen and (max-width: 1415px){
@@ -246,11 +209,6 @@ a{
         font-size: 1.9em;
     }
 }
-@media only screen and (max-width: 1305px){
-    .headshot{
-        background-size: 165%;
-    }
-}
 @media only screen and (max-width: 1200px){
     .strengths1, .strengths2, .strengths4, .strengths5{
         background-size: 130%;
@@ -259,11 +217,11 @@ a{
         background-position: -270px -30px !important;
         background-size: 130%;
     }
+    .portrait{
+        width: 400px;
+    }
 }
 @media only screen and (max-width: 1169px){
-    .headshot{
-        background-size: 200%;
-    }
     .footer .row{
         margin: 0px 50px;
     }
@@ -288,11 +246,6 @@ a{
         background-size: 150%;
     }
 }
-@media only screen and (max-width: 940px){ 
-    .headshot{
-        background-size: 210%;
-    }
-}
 @media only screen and (max-width: 900px){
     .strengths1, .strengths2, .strengths4{        
         background-size: 170%;
@@ -305,24 +258,23 @@ a{
         background-position: right -120px center !important;
         background-size: 170%;
     }
-    .header{
-        height: 700px;
-    }
-    .header .column{
-        margin: 0px;
-        max-width: 100%;
-    }
     .h-text{
         position: absolute;
-        bottom: 50px;
+        bottom: 10%;
         z-index: 1;
+        width: 90% !important;
+        padding-left: 10%;
+        margin: 0;
+        background-color: rgb(255, 255, 255, 0.7);
     }
-    .headshot{
-        position: absolute;
-        width: 80vw;
-        background-size: 100%;
-        background-position: 0px -120px;
+
+    .portrait{
+        width: 500px;
     }
+
+
+
+
     .footer > div{
         flex-direction: column;
     }
@@ -349,10 +301,6 @@ a{
     }
 }
 @media only screen and (max-width: 671px){
-    .headshot{
-        height: 80vw;
-        background-position: 0px -70px;
-    }
     .header{
         height: 680px;
     }
@@ -362,6 +310,9 @@ a{
     }
     .strength{
         margin: 10px 0px;
+    }
+    .portrait{
+        width: 400px;
     }
 }
 @media only screen and (max-width: 680px){
