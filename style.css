@@ -59,17 +59,24 @@ body {
     position: relative;
 }
 
+.cbodybuilding{
+    background-color: var(--main-color);
+}
+.cbodybuilding > div > h1, .cbodybuilding > div > div > p{
+    color: var(--white);
+}
+
 h1 {
     color: var(--main-color);
     font-size: 4em;
 }
 
 p {
-    color: var(--secondary-color);
+    color: var(--main-color);
     font-size: 2em;
 }
 a{
-    color: var(--secondary-color);
+    color: var(--main-color);
     text-decoration: underline;
 }
 .header-space{
@@ -118,6 +125,14 @@ a{
     justify-content: center;
     margin-bottom: 70px;
 }
+.cbodybuilding > div > div > .portfoliobtn {
+    background-color: #dbff24;
+    color: var(--main-color);
+}
+.cbodybuilding > div > div > .portfoliobtn:hover {
+    background-color: #a2bd1b;
+}
+
 .portfoliobtn {
   display: inline-block;
   padding: 15px 20px;
@@ -130,7 +145,7 @@ a{
 }
 
 .portfoliobtn:hover {
-  background-color: #434343; /* Darker blue */
+  background-color: #181bf9; /* Darker blue */
 }
 
 
